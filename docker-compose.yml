@@ -49,8 +49,8 @@ services:
     image: ghcr.io/we-promise/sure:latest
     volumes:
       - app-storage:/rails/storage
-    ports:
-      - 3000:3000
+    # ports:
+    #   - 3000:3000  # Handled by Coolify's reverse proxy
     restart: unless-stopped
     environment:
       <<: *rails_env
